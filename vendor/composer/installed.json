@@ -1272,6 +1272,71 @@
             "install-path": "../hamcrest/hamcrest-php"
         },
         {
+            "name": "laravel/breeze",
+            "version": "v1.21.0",
+            "version_normalized": "1.21.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/breeze.git",
+                "reference": "a7e7e2acfb2fd332183aae41c445be7a2329e93e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/a7e7e2acfb2fd332183aae41c445be7a2329e93e",
+                "reference": "a7e7e2acfb2fd332183aae41c445be7a2329e93e",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^10.0",
+                "illuminate/filesystem": "^10.0",
+                "illuminate/support": "^10.0",
+                "illuminate/validation": "^10.0",
+                "php": "^8.1.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^8.0",
+                "phpstan/phpstan": "^1.10"
+            },
+            "time": "2023-05-04T15:02:53+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Breeze\\BreezeServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Breeze\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Minimal Laravel authentication scaffolding with Blade and Tailwind.",
+            "keywords": [
+                "auth",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/breeze/issues",
+                "source": "https://github.com/laravel/breeze"
+            },
+            "install-path": "../laravel/breeze"
+        },
+        {
             "name": "laravel/framework",
             "version": "v10.10.1",
             "version_normalized": "10.10.1.0",
@@ -8267,6 +8332,7 @@
         "fakerphp/faker",
         "filp/whoops",
         "hamcrest/hamcrest-php",
+        "laravel/breeze",
         "laravel/pint",
         "laravel/sail",
         "mockery/mockery",
