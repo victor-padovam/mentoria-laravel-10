@@ -24,7 +24,6 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/', [DashbordController::class, 'index'])->name('dashboard.index');
 });
 
-
 Route::prefix('produtos')->group(function () {
     Route::get('/', [ProdutosController::class, 'index'])->name('produto.index');
     //Cadastro Create
@@ -64,3 +63,6 @@ Route::prefix('usuario')->group(function () {
     Route::put('/atualizarUsuario/{id}', [UsuarioController::class, 'atualizarUsuario'])->name('atualizar.usuario');
     Route::delete('/delete', [UsuarioController::class, 'delete'])->name('usuario.delete');
 });
+
+
+require __DIR__ . '/auth.php';
