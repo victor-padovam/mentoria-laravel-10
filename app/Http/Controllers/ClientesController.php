@@ -46,21 +46,19 @@ class ClientesController extends Controller
         return view('pages.clientes.create');
     }
 
-    public function atualizarCliente(Request $request, $id)
+    public function atualizarCliente(FormRequestClientes $request, $id)
     {
         if ($request->method() == "PUT") {
             // atualiza os dados
             $data = $request->all();
-            $componentes = new Componentes();
-            $data['valor'] = $componentes->formatacaoMascaraDinheiroDecimal($data['valor']);
             $buscaRegistro = Cliente::find($id);
             $buscaRegistro->update($data);
 
             Toastr::success('Dados atualizados com sucesso.');
-            return redirect()->route('produto.index');
+            return redirect()->route('clientes.index');
         }
-        $findProduto = Cliente::where('id', '=', $id)->first();
+        $findCliente = Cliente::where('id', '=', $id)->first();
 
-        return view('pages.clientes.atualiza', compact('findProduto'));
+        return view('pages.clientes.atualiza', compact('findCliente'));
     }
 }
